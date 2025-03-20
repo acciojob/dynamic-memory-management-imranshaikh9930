@@ -1,6 +1,5 @@
 // Import stylesheets
-import './style.css';
-// Complete the js code
+
 
 const limit = 50; // Heap memory usage limit in MB
 let elements = []; // Array to hold generated DOM elements
@@ -38,7 +37,8 @@ const updateMemoryUsage = () => {
     document.getElementById("memory").textContent = `Memory Usage: ${usedMemory} MB`;
 
     if (usedMemory > limit) {
-        alert("Memory limit exceeded! Please remove elements.");
+        // alert("Memory limit exceeded! Please remove elements.");
+        document.getElementById("memory").textContent = `Memory limit exceeded! Please remove elements.`;
     }
 } else {
     document.getElementById("memory").textContent = `Memory Usage: Not supported in this browser`;
